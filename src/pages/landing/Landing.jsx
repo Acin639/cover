@@ -2,6 +2,7 @@ import React from 'react';
 import './Landing.css';
 import { useNavigate, useParams } from 'react-router-dom'
 import Logo from './logo.svg';
+import normal from '../..assets/Screenshot_20251118-163919_3-removebg-preview.png';
 
 const Landing = () => {
   
@@ -17,7 +18,7 @@ const Landing = () => {
       </div>
 
       <header className="header">
-        <img src={Logo} alt="Logo" className="logo" />
+        <img src={normal} alt="Logo" className="logo" />
         <div className="controls">
           <select className="lang" aria-label="language">
             <option>English</option>
