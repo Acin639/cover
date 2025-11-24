@@ -3,6 +3,7 @@ import SearchBar from '../../components/searcher/SearchBar.jsx';
 import Results from '../../components/searcher/Results.jsx';
 import './Search.css';
 import arrow from '../../assets/arrow_left.png';
+import normal_logo from '../../assets/normal_logo.png';
 
 const API = "https://api.themoviedb.org/3/search/movie?api_key=f43ec82a5f24fe6190891894b7436c7a&query=";
 
@@ -20,7 +21,7 @@ const Search = () => {
     <>
       <div className="topbar">
         <div className="left-section">
-          <div className="logo"><img className="icons" src={arrow}/></div>
+          <div className="logo"><img className="icons" src={normal_logo}/></div>
           <div className="brand">search...</div>
         </div>
 
