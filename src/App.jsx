@@ -46,7 +46,7 @@ const App = () => {
         <Route path='/player/:id' element={<Player/>}/>
         <Route path='/home' element={<Home/>} />
         <Route path='/search' element={<Search/>} />
-        <Route path='/stream' element={<Stream/>} />
+        <Route path='/stream/:id' element={<Stream/>} />
       </Routes>
     </div>
   )
