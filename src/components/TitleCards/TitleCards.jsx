@@ -28,7 +28,7 @@ const TitleCards = ({title, category}) => {
       <div className='scroll-wrapper'>
         <div className='card-list' >
           {apiData.map((card, index) => (
-            <Link className='card' key={index} to={`/stream`}>
+            <Link className='card' key={index} to={`/stream/${card.id}`}>
               <img src={`https://image.tmdb.org/t/p/w500`+card.backdrop_path} alt='' />
               <p>{card.original_title}</p>
             </Link>
