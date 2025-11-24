@@ -4,12 +4,14 @@ import Results from '../../components/searcher/Results.jsx';
 import './Search.css';
 import arrow from '../../assets/arrow_left.png';
 import normal_logo from '../../assets/normal_logo.png';
+import {useNavigate,useParams} from 'react-router-dom';
 
 const API = "https://api.themoviedb.org/3/search/movie?api_key=f43ec82a5f24fe6190891894b7436c7a&query=";
 
 const Search = () => {
   const [query, setQuery] = useState("Avatar");
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch(API + query)
