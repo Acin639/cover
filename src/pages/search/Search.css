@@ -11,12 +11,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 18px;
+  background: #1d1c29;
 }
 
 .left-section {
   display: flex;
   align-items: center;
   gap: 12px;
+  background: #1d1c29;
 }
 
 .logo {
