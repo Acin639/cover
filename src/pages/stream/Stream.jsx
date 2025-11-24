@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import './Stream.css'
 const API_KEY = 'f43ec82a5f24fe6190891894b7436c7a';
-const MOVIE_ID = 843527;
+//const MOVIE_ID = 843527;
+import useParams from 'react-router-dom';
 
 const Stream = () => {
+  const {id} = useParams()
   const [movie, setMovie] = useState(null)
   const [cast, setCast] = useState([])
   const [suggestions, setSuggestions] = useState([])
 
   useEffect(() => {
     async function load() {
-      const res = await fetch(`https://api.themoviedb.org/3/movie/${MOVIE_ID}?api_key=${API_KEY}&append_to_response=credits`)
+      const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=credits`)
       const data = await res.json()
       setMovie(data)
       setCast(data.credits?.cast?.slice(0, 8) || [])
 
-      const rec = await fetch(`https://api.themoviedb.org/3/movie/${MOVIE_ID}/recommendations?api_key=${API_KEY}`)
+      const rec = await fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${API_KEY}`)
       const recData = await rec.json()
       setSuggestions(recData.results || [])
     }
