@@ -2,7 +2,7 @@ import React from 'react';
 import './Landing.css';
 import { useNavigate, useParams } from 'react-router-dom'
 import Logo from './logo.svg';
-import normal from '../..assets/Screenshot_20251118-163919_3-removebg-preview.png';
+import normal from '../..assets/normal_logo.png';
 
 const Landing = () => {
   
@@ -23,6 +23,7 @@ const Landing = () => {
           <select className="lang" aria-label="language">
             <option>English</option>
             <option>Français</option>
+            
           </select>
           <button className="sign" onClick={()=> navigate("/login")}>Sign In</button>
         </div>
