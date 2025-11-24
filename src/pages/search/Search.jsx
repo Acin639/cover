@@ -21,7 +21,7 @@ const Search = () => {
     <>
       <div className="topbar">
         <div className="left-section">
-          <div className="logo"><img className="icons" src={normal_logo}/></div>
+          <div className="logo"><img className="icons" src={arrow}/></div>
           <div className="brand">search...</div>
         </div>
 
